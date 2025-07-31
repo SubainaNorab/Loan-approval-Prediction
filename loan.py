@@ -5,7 +5,6 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-import streamlit as st
 from sklearn.metrics import classification_report
 import joblib
 
@@ -13,7 +12,7 @@ import joblib
 data=pd.read_csv("C:/Users/Subaina/OneDrive - Higher Education Commission/Documents/Internship/Elevvo/Loan-approval-Prediction/loan_approval_dataset.csv")
 
 # print(data)
-x = data.drop(columns=[' loan_status']) 
+x = data.drop(columns=[' loan_status','loan_id']) 
 y=data[' loan_status']
 
 # label encode to convert string to number
